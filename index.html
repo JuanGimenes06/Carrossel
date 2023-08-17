@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="carrossel">
+
+        <img src="" alt="" id="carrosselImagem">
+
+        <button id="anterior">Anterior</button>
+        <button id="proximo">Próxima</button>
+
+    </div>
+
+    <script>
+
+        let imgIndice = 0;
+
+        const IMAGENS = ['img/imagem1.png', 'img/imagem2.png', 'img/imagem3.png', 'img/imagem4.png', ]
+        const prevButton = document.getElementById('anterior')
+        const nextButton = document.getElementById('proximo')
+
+        var IMG = document.getElementById('carrosselImagem')
+
+        function carregar() {
+            IMG.src = IMAGENS[imgIndice]
+        }
+
+        prevButton.addEventListener ('click', () => {
+            if(imgIndice > 0 ){
+
+                --imgIndice // -- = menos 1 
+                carregar()
+            }
+
+            else{
+                imgIndice = 3
+                carregar()
+            }
+
+        });
+
+        nextButton.addEventListener ('click', () => {
+
+            var limite = (IMAGENS.length)-1
+
+            
+
+            if (imgIndice < limite) {
+
+                ++imgIndice // ++ = main 1 
+                carregar()
+
+            }
+
+            else{
+                imgIndice = 0
+
+                carregar()
+            }
+        });
+
+              
+        
+
+    </script>
+
+</body>
+</html>
