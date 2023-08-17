@@ -27,19 +27,19 @@
 
         var IMG = document.getElementById('carrosselImagem')
 
-        function carregar() {
-            IMG.src = IMAGENS[imgIndice];
-        }
+        //function carregar() {
+        //    IMG.src = IMAGENS[imgIndice];
+        //}
 
 
         //animação fade
-       // function carregar() {
-       //     IMG.style.opacity = 0.6; // Inicia a transição (fade-out)
-       //     setTimeout(() => {
-       //         IMG.src = IMAGENS[imgIndice];
-       //         IMG.style.opacity = 1; // Conclui a transição (fade-in)
-       //     }, 500); // Tempo de espera para a transição
-       // }
+        function carregar() {
+            IMG.style.opacity = 0; // Inicia a transição (fade-out)
+            setTimeout(() => {
+                IMG.src = IMAGENS[imgIndice];
+                IMG.style.opacity = 1; // Conclui a transição (fade-in)
+            }, 500); // Tempo de espera para a transição
+        }
 
        
 
