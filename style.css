@@ -5,13 +5,11 @@
     flex-direction: column;
 }
 
-img{
-    width: 1000px;
-    height: auto;
-}
 
 #carrosselImagem{
-    transition: opacity 0.5s ease-in-out; /* Efeito de transição */
+    
+    width: 1000px;
+    height: auto;
 }
 button{
     width: 100px;
